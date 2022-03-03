@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="myForm" class="example-form" >
+      <h2>Auth panel</h2>
+      <hr>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Your email</mat-label>
+        <input matInput placeholder="email" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Your password</mat-label>
+        <input matInput placeholder="password" formControlName="password">
+      </mat-form-field>
+      <button (click)="submit()" class="auth-btn" mat-button>Basic</button>
+    </form>
+  </div>
+</div>
