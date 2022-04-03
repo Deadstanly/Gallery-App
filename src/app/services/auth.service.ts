@@ -13,11 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   public login(user: IUser): Observable<IAuth>{
-    return this.http.post<IAuth>(`${environment.authUrl}${environment.apiKey}`, user)
+    return this.http.post<IAuth>(`${environment.authUrl}${environment.apiKey}`, user);
   }
 
   public registration(user: IUser): Observable<IUser> {
-    return this.http.post<IUser>(`${environment.authUrl}${environment.apiKey}`, user)
+    return this.http.post<IUser>(`${environment.authUrl}${environment.apiKey}`, user);
   }
 
 }
