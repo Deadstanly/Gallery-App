@@ -11,7 +11,7 @@
   <ng-template #searching>
     <div class="container">
       <div class="row">
-        <div *ngFor="let item of photosData?.photos.photo | paginate: {itemsPerPage: 5, currentPage: page}" class="col-md-4">
+        <div *ngFor="let item of photosData?.photos.photo | paginate: {itemsPerPage: 6, currentPage: page}" class="col-md-4">
           <div class="card p-2 m-2">
             <img src="{{item.url_m}}" alt="">
             <button (click)="addToFavorites(item)"  mat-button class="btn-favorites">Add to favourites</button>
