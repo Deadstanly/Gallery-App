@@ -5,9 +5,14 @@
 export const environment = {
   production: false,
   authUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
+<<<<<<< HEAD
   apiKey: 'AIzaSyAK3HEmcaTHuUwJ0eKr9DLMGVQY-xDI9Kk',
   flickrUrl: 'https://www.flickr.com/services/rest/',
   flickrKey: '262aa6e88d60554373367fb8efc7e818'
+=======
+  apiKey: 'AIzaSyAK3HEmcaTHuUwJ0eKr9DLMGVQY-xDI9Kk'
+
+>>>>>>> 4ec06f5cfd4fae9a41abb360bfcb2fe8ac650327
 };
 
 /*
