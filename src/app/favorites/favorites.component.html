@@ -1,0 +1,26 @@
+<div class="container">
+
+<mat-toolbar color="primary">
+  <span class="title">My Gallery app</span>
+  <div>
+    <button routerLink="/main-page" routerLinkActive="active-link" class="tool-link-btn" mat-button>Search</button>
+    <button routerLink="/favorites" routerLinkActive="active-link" class="tool-link-btn" mat-button>Favorites</button>
+  </div>
+  <button mat-raised-button (click)="exit()">Go out</button>
+</mat-toolbar>
+
+
+  <div class="row pb-5">
+    <div class="col-md-4" *ngFor="let item of favoritesData">
+      <div class="card mt-5 p-2 shadow-lg">
+        <img src="{{item.photo.url_m}}" alt="">
+        <button (click)="deleteFavoritesPhoto(item.id)" mat-button class="delete-btn">Delete photo</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+

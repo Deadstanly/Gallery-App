@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="form">
+    <form [formGroup]="form" class="example-form" >
+      <h2>Registration</h2>
+      <hr>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter your email address</mat-label>
+        <input matInput placeholder="email" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput placeholder="password" formControlName="password">
+      </mat-form-field>
+      <button (click)="submitRegistration()" class="auth-btn" mat-button>Register</button>
+      <a routerLink="/auth" class="reg-link">To the main</a>
+    </form>
+  </div>
+</div>

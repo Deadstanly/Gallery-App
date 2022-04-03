@@ -1,0 +1,33 @@
+<div class="container">
+  <input
+    #searchInput (input)="search()"
+    type="text"
+    class="search-input"
+    placeholder="Search"
+  >
+
+  <ng-container *ngIf="inputValue; then searching; else empty"></ng-container>
+
+  <ng-template #searching>
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let item of photosData?.photos.photo | paginate: {itemsPerPage: 5, currentPage: page}" class="col-md-4">
+          <div class="card p-2 m-2">
+            <img src="{{item.url_m}}" alt="">
+            <button (click)="addToFavorites(item)"  mat-button class="btn-favorites">Add to favourites</button>
+          </div>
+        </div>
+        <div class="pagination-block">
+          <pagination-controls (pageChange)="page = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #empty>
+    <p class="start-search">Start your image search</p>
+  </ng-template>
+
+</div>
+
+
